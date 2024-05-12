@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change button</title>
+    <style>
+        nav {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 45px;
+            font-family: 'Franklin Gothic Medium';
+        }
+
+        button {
+            border-radius: 4px;
+            background-color: #5ca1e1;
+            border: none;
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            padding: 16px;
+            width: 220px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 36px;
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+        }
+
+        .b {
+            background-color: black;
+        }
+
+        .r {
+            background-color: #f53f3f;
+        }
+
+        button {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.3s;
+            border-radius: 105px;
+        }
+
+        button:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 14px;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            padding-right: 24px;
+            padding-left: 8px;
+        }
+
+        button:hover:after {
+            opacity: 1;
+            right: 10px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .main-box {
+            position: relative;
+        }
+        .w{
+            background-color: #e0fc46b6;
+            color: black;
+        }
+
+        .container {
+    width: 62%;
+    height: 296px;
+    border: 2px solid rgb(20, 20, 9);
+    position: absolute;
+    left: 29%;
+    bottom: 60px;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Change Colour On Click</h1>
+    </nav>
+    <div>
+        <button id="blue" onclick="change1()"><span>Blue</span></button>
+        <button id="black" class="b" onclick="change2()"><span>Black</span></button>
+        <button id="red" class="r" onclick="change3()"><span>Red</span></button>
+    </div>
+    <div class="main-box">
+        <div class="container" id="box">
+        </div>
+    </div>
+    <button id="red" class="w" onclick="change4()"><span>Reset</span></button>
+    <script src="app.js"></script>
+</body>
+
+</html>
